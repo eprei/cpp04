@@ -34,6 +34,6 @@ std::string	WrongAnimal::getType( void ) const
 
 void	WrongAnimal::makeSound( void ) const
 {
-	std::cout << "** general WrongAnimal noises **" << std::endl;
+	std::cout << "** WrongAnimal silence **" << std::endl;
 	return ;
 }
