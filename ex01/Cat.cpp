@@ -1,9 +1,12 @@
 #include "Cat.hpp"
+#include "Brain.hpp"
+#include "Animal.hpp"
 
 Cat::Cat( void )
 {
 	std::cout << "Cat default constructor called" << std::endl;
 	_type = "Cat";
+	_brain = new Brain();
 	return ;
 }
 
@@ -17,6 +20,7 @@ Cat::Cat( Cat const & src ) : Animal()
 Cat::~Cat( void )
 {
 	std::cout << "Cat destructor called"<< std::endl;
+	delete _brain;
 	return ;
 }
 
