@@ -3,7 +3,6 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
-#include "Brain.hpp"
 
 int main()
 {
@@ -21,7 +20,7 @@ int main()
 	meta->makeSound();
 	std::cout << std::endl;
 
-	std::cout << "makeSound() of the base class 'Animal' called through the derived class 'Dog'" << std::endl;
+	std::cout << "makeSound() of the base class 'Animal' called through the derived pointer to class 'Dog'" << std::endl;
 	j->Animal::makeSound();
 	std::cout << std::endl;
 
@@ -30,21 +29,22 @@ int main()
 	delete meta;
 
 //	wrong animal example
+	std::cout << std::endl;
 
-	// const WrongAnimal* meta = new WrongAnimal();
-	// const WrongAnimal* i = new WrongCat();
+	const WrongAnimal* metaWrong = new WrongAnimal();
+	const WrongAnimal* wrongFelix = new WrongCat();
 
-	// std::cout << std::endl;
-	// std::cout << "The type of i is : " << i->getType() << " " << std::endl;
+	std::cout << std::endl;
+	std::cout << "The type of wrongFelix is : " << wrongFelix->getType() << " " << std::endl;
 
-	// std::cout << std::endl;
-	// i->makeSound();
-	// i->WrongAnimal::makeSound();
-	// meta->makeSound();
-	// std::cout << std::endl;
+	std::cout << std::endl;
+	wrongFelix->makeSound();
+	wrongFelix->WrongAnimal::makeSound();
+	metaWrong->makeSound();
+	std::cout << std::endl;
 
-	// delete i;
-	// delete meta;
+	delete wrongFelix;
+	delete metaWrong;
 
 	return 0;
 }

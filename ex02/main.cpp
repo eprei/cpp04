@@ -5,6 +5,9 @@
 
 int main()
 {
+	// This would NOT be ok because Animal is abstract
+	// Animal test;
+
 	int nOfAnimals = 6;
 	Animal *group[nOfAnimals];
 

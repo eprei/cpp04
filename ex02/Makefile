@@ -1,7 +1,7 @@
 CXX = c++
 # CXX = g++-12
 
-NAME = je_ne_veux_pas_bruler_le_monde
+NAME = classe_abstraite
 
 SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
